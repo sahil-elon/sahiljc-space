@@ -222,7 +222,7 @@ document.body.style.cursor=hov>=0?'pointer':'';
 requestAnimationFrame(fr)}
 requestAnimationFrame(fr);
 addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY},{passive:true});
-document.addEventListener('click',e=>{if(e.target.closest('a,button'))return;if(hov>=0)ss[hov+1].scrollIntoView({behavior:rmo?'auto':'smooth'})});
+document.addEventListener('pointerup',e=>{if(e.target.closest('a,button'))return;const t=e.pointerType!='mouse';let b=-1,bd=1e9;PL.forEach((p,i)=>{const d=Math.hypot(e.clientX-p.x,e.clientY-p.y);if(d<bd&&d<(t?30:Math.max(p.r+8,14))){bd=d;b=i}});if(b>=0)ss[b+1].scrollIntoView({behavior:rmo?'auto':'smooth'})});
 })();
 
 /* renders the three lists above */
