@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sahil Chaudhary, aerospace engineer and builder. Advance humanity toward Type III: rockets, CFD, AI tools and the long game.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website"><meta property="og:title" content="Sahil Chaudhary: Advance humanity toward Type III"><meta property="og:description" content="Sahil Chaudhary, aerospace engineer and builder. Advance humanity toward Type III: rockets, CFD, AI tools and the long game."><meta property="og:url" content="https://sahiljc.space/">
+<meta name="twitter:card" content="summary"><meta name="twitter:site" content="@sahil_jc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%9A%80%3C/text%3E%3C/svg%3E">
+<title>Sahil — Advance humanity toward Type III</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;600;900&family=Geist:wght@300;400&family=Geist+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#3d6fe0;--fg:#fff;--dim:#ffffffb3;--gold:#ffd166;--d:"Unbounded","Arial Black",system-ui,sans-serif;--b:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;--m:"Geist Mono",ui-monospace,Menlo,Consolas,monospace;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 60px);background:#000}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:#000;color:var(--fg);font:300 1.05rem/1.65 var(--b);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+p{max-width:58ch;margin:0 0 1em}
+#st{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+main,header,#hud,#rk{position:relative;z-index:2}
+header,#hud{position:fixed;left:0;right:0;display:flex;justify-content:space-between;align-items:center;gap:1.2rem;padding:0 4vw;font:500 11px var(--m);z-index:9}
+header{top:0;padding-top:calc(env(safe-area-inset-top,0px) + 16px);padding-bottom:12px}
+header nav{display:flex;gap:1.8rem}header a:hover{color:var(--gold)}
+.mark{font:600 1.1rem var(--d)}.mark small{font:500 10px var(--m);margin-left:.6em;opacity:.7}
+#hud{bottom:0;right:auto;flex-direction:column;align-items:flex-start;gap:.15rem;padding-bottom:calc(env(safe-area-inset-bottom,0px) + 14px);text-shadow:0 0 12px #0008}
+#hud b{font:600 1.5rem var(--d);color:var(--gold);letter-spacing:-.03em}
+#rk{position:fixed;right:4vw;bottom:calc(env(safe-area-inset-bottom,0px) + 18vh);width:26px;height:90px;z-index:9;opacity:0}
+#fl{transform-origin:12px 58px;fill:var(--gold)}
+#ct{position:fixed;inset:0;z-index:20;display:grid;place-items:center;font:900 clamp(4rem,22vw,16rem)/1 var(--d);color:var(--gold);cursor:pointer;background:#000}
+section{padding:18vh 9vw 10vh 4vw}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-top:20vh}
+.rest{opacity:0;transition:opacity .5s}.rest.on{opacity:1}
+.pre{display:block;font:300 clamp(1.1rem,2.6vw,2.2rem)/1.2 var(--d);margin-bottom:1.2vw}
+.big{display:block;font:900 10.4vw/.95 var(--d);letter-spacing:-.05em;white-space:nowrap}
+.l{display:inline-block;animation:up 1s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--i)*70ms)}
+@keyframes up{from{transform:translateY(80%);opacity:0}}
+.who{display:flex;flex-wrap:wrap;gap:3vh 5vw;justify-content:space-between;align-items:flex-end;margin-top:7vh}
+.who h2{font:600 clamp(1.4rem,3vw,2.4rem)/1 var(--d);margin:0;letter-spacing:-.03em}.who div{flex:1 1 22rem;max-width:44rem}
+.lay{font:500 11px var(--m);color:var(--gold);margin:0 0 1.4rem}
+h2.x{font:800 clamp(2.2rem,6.6vw,6.4rem)/.98 var(--d);letter-spacing:-.05em;margin:0 0 .6em;max-width:13em}
+.sub{font-size:1.25rem;color:var(--dim)}
+.st{font:500 11px var(--m);color:var(--dim)}
+.row{display:grid;grid-template-columns:1fr auto;gap:.2rem 2rem;align-items:baseline;padding:1.2rem 0;border-top:1px solid #ffffff2e}
+.row h3{margin:0;font:600 clamp(1.3rem,3vw,2.5rem)/1.1 var(--d);letter-spacing:-.04em;transition:color .2s,transform .3s}
+.row:hover h3{color:var(--gold);transform:translateX(.6rem)}
+.row .st{text-align:right}.row p{grid-column:1;margin:0;color:var(--dim);font-size:.98rem}
+.g{font:500 11px var(--m);color:var(--gold);margin:9vh 0 .8rem}
+.big2{font:900 clamp(2.4rem,9vw,9rem)/.95 var(--d);letter-spacing:-.06em;margin:10vh 0 0;max-width:10em}
+.sm{font:300 clamp(1.2rem,2.6vw,2rem)/1.3 var(--d);margin:10vh 0 .6em;max-width:20em}
+.rung{display:grid;grid-template-columns:3rem 1fr;padding:1.6rem 0;border-top:1px solid #ffffff2e}
+.rung>span{font:500 11px var(--m);color:var(--dim);padding-top:1.3em}
+.rung h3{margin:0;font:600 clamp(1.5rem,4.4vw,3.8rem)/1.05 var(--d);letter-spacing:-.05em}
+.rung p{font-size:.95rem;color:var(--dim);margin:.5em 0 0}
+.rung.k h3{color:var(--gold);font-weight:900;font-size:clamp(2rem,7vw,6.5rem)}
+.stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-top:2rem}
+.stack h4{font:600 .95rem var(--d);margin:0 0 .5rem;letter-spacing:-.03em}.stack p{font-size:.9rem;color:var(--dim)}
+.inv{background:var(--gold);color:#02030a;margin:10vh 0 0;padding:6vh 4vw 4vh}
+.inv .row{border-color:#02030a33}.inv .row p,.inv .st,.inv .g{color:#02030a99}.inv .row:hover h3{color:#02030a}
+#q{font:600 clamp(1.5rem,3.8vw,3.2rem)/1.15 var(--d);letter-spacing:-.04em;transition:opacity .18s;min-height:8em;max-width:20em}
+#q small{display:block;margin-top:1.4rem;font:500 11px var(--m);color:var(--gold);letter-spacing:0}
+.ctl{display:flex;align-items:center;gap:1rem;font:500 12px var(--m)}
+.b{background:none;border:1px solid #fff6;color:#fff;font:500 13px var(--m);padding:.7rem 1.1rem;cursor:pointer}.b:hover{border-color:var(--gold);color:var(--gold)}
+.hi{font:900 18vw/.9 var(--d);letter-spacing:-.07em;margin:0 0 4vh;color:var(--gold)}
+@media(max-width:720px){header nav{display:none}.row{grid-template-columns:1fr}.row .st{text-align:left;order:3}.big{font-size:9.6vw}}
+@media(prefers-reduced-motion:reduce){.l{animation:none}html{scroll-behavior:auto}}
+#or{position:fixed;inset:0;width:100%;height:100%;z-index:3;pointer-events:none}
+.big{font-size:7vw}
+@media(max-width:720px){.big{font-size:11vw}.who div p:nth-child(2){display:none}}
+.sh{animation:shk .08s linear infinite}@keyframes shk{50%{margin-right:3px}}
+#cd{position:fixed;inset:0;z-index:15;display:grid;place-items:center;pointer-events:none;font:900 clamp(3rem,12vw,9rem)/1 var(--d);color:var(--gold);text-shadow:0 0 40px #0008}
+#hud{background:#00000066;backdrop-filter:blur(6px);padding-left:4vw;padding-right:1rem;padding-top:8px;border-radius:0 .5rem 0 0}
+#gr{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:0;background-image:linear-gradient(#ffffff1f 1px,transparent 1px),linear-gradient(90deg,#ffffff1f 1px,transparent 1px),linear-gradient(#ffffff0d 1px,transparent 1px),linear-gradient(90deg,#ffffff0d 1px,transparent 1px);background-size:120px 120px,120px 120px,24px 24px,24px 24px}
+#vx,#hy,#co{display:none;position:fixed;left:0;top:0;z-index:7;pointer-events:none;opacity:0}
+#vx{width:1px;height:100%;background:#ffd16670}#hy{height:1px;width:100%;background:#ffd16670}
+#co{font:500 11px var(--m);color:var(--gold);white-space:pre}
+.wd{width:max-content;max-width:100%}
+.dim{position:relative;height:1px;background:var(--gold);margin:1.2rem 0}
+.dim::before,.dim::after{content:"";position:absolute;top:-4px;border:4px solid transparent}
+.dim::before{left:0;border-right:9px solid var(--gold);border-left:0}.dim::after{right:0;border-left:9px solid var(--gold);border-right:0}
+.dim span{position:absolute;left:50%;top:-.85em;transform:translateX(-50%);background:var(--sky,#000);padding:0 .7rem;font:500 11px var(--m);color:var(--gold);white-space:nowrap}
+main>section{position:relative}
+.tb{position:absolute;right:9vw;bottom:3vh;border:1px solid #ffffff80;padding:.4rem .8rem;font:500 10px/1.5 var(--m);text-align:right;color:var(--dim)}
+details{grid-column:1;margin-top:.5rem}
+summary{cursor:pointer;font:500 11px var(--m);color:var(--gold);list-style:none;width:max-content}
+summary::-webkit-details-marker{display:none}summary::after{content:" +"}details[open] summary::after{content:" −"}
+details p{color:var(--dim);font-size:.98rem;margin:.8rem 0 0}
+.sup{font:500 11px var(--m);color:var(--gold);margin:.4rem 0 .6rem}
+.lk{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-top:1px solid #ffffff2e;padding:1rem 0}
+.lk span{font:800 clamp(1.8rem,5vw,4rem)/1.1 var(--d);letter-spacing:-.04em;transition:color .2s}
+.lk small{font:500 11px var(--m);color:var(--dim)}.lk:hover span{color:var(--gold)}
+.feat{margin-top:12vh;padding:clamp(1.4rem,4vw,3.2rem);border:1px solid #ffd16666;background:#ffffff0a}
+.fh{font:800 clamp(2.2rem,6.5vw,5.5rem)/1 var(--d);letter-spacing:-.05em;margin:0 0 .4em}
+</style></head><body>
+<canvas id="st"></canvas><canvas id="or"></canvas><div id="gr"></div><i id="vx"></i><i id="hy"></i><span id="co"></span>
+<div id="ct" role="status" aria-label="Launch countdown">3</div>
+<header><a class="mark" href="#home">Sahil<small>ELON</small></a>
+<nav><a href="#about">About</a><a href="#build">Build</a><a href="#frontiers">Frontiers</a><a href="#mind">Mind</a><a href="#wisdom">Wisdom</a></nav><a href="#hi">Say hi</a></header>
+<svg id="rk" viewBox="0 0 24 90" fill="none" stroke="#fff" stroke-width="1.5" aria-hidden="true"><path d="M12 2c6 10 6 28 5 44H7C6 30 6 12 12 2zM7 38l-5 14 5-4M17 38l5 14-5-4"/><circle cx="12" cy="26" r="2.5"/><path id="fl" d="M8 48h8l-4 18z" stroke="none"/></svg>
+<div id="hud"><span id="ly">Launch pad</span><b id="alt">0 km</b></div>
+
+<main>
+<section class="hero" id="home" data-l="Deep space, Type III">
+<div class="rest" id="rest"><p class="lay" style="margin-bottom:1.2rem;font-size:clamp(.95rem,1.5vw,1.25rem)">One human. One mission.</p><h1 style="margin:0"><span class="pre">Advance humanity toward</span><div class="wd"><div class="dim"><span>3.0 on the Kardashev scale</span></div><span class="big" id="big" aria-label="Type III."></span></div></h1>
+<div class="who"><h2>Sahil Chaudhary</h2><div>
+<p style="color:#fff">I’m an aerospace engineer driven by a fascination with space, rockets, and the future of humanity.</p>
+<p style="color:var(--dim)">I’m studying across engineering, physics, AI, energy, and other frontier fields with one long-term goal: help make Earth better, push humanity beyond the stars, and eventually turn today’s science fiction into real technology.</p>
+<p style="margin:0">Aerospace Engineer · Builder &nbsp; <a href="#about" style="color:var(--gold)">Explore ↓</a></p><p class="st" style="margin-top:1.2rem">Scroll to descend. Click a world to jump there.</p></div></div></div>
+</section>
+
+<section id="about" data-l="Interplanetary space"><p class="lay">Interplanetary space. Where it began.</p><h2 class="x">It started on the last bench.</h2><div class="row"><h3>Where it began</h3><span class="st">7th grade</span><p>It started in the seventh grade, on the last bench of a classroom near the end of the school day. “If nobody has ever gone there, maybe one day we will.”</p><details><summary>Read more</summary><p>My best friend and I were talking about a video we had seen on black holes and wormholes — how black holes pull everything toward them, how strange wormholes are supposed to be, and how some theories suggest they could connect distant places, or perhaps something even stranger.</p><p>At some point, the conversation became simple:</p><p><b style="color:var(--gold);font-weight:600">We genuinely decided that someday we would try to go on a mission to a black hole.</b></p><p>I went home that day and started reading more.</p><p>One question became another. Black holes led to space. Space led to rockets. Rockets led to physics, engineering and eventually the much larger question of what humanity could become.</p></details></div><div class="row"><h3>Rockets &amp; ambition</h3><span class="st">9th grade</span><p>A few years later, around ninth grade, I discovered Elon Musk and became fascinated not only by rockets, but by the idea that an individual could decide to work on problems that looked impossibly large. That pushed me toward the idea of someday building a space company of my own.</p><details><summary>Read more</summary><p>From there, my curiosity kept expanding.</p><p>I started reading about people like Einstein, Stephen Hawking, Nikola Tesla and Michio Kaku. I became interested in biographies, philosophy, science fiction, and people like Steve Jobs who approached building in completely different ways.</p><p>Slowly, the dream stopped being only about rockets.</p></details></div><div class="row"><h3>Aerospace engineering</h3><span class="st"></span><p>That fascination eventually became concrete enough that I chose to study Aerospace Engineering.</p><details><summary>Read more</summary><p>I began thinking about interstellar spacecraft, advanced propulsion, Dyson spheres, artificial intelligence, energy, robotics and technologies that today still sound like science fiction.</p><p>Eventually I discovered the idea of civilization scales and Type III civilizations.</p><p>That gave a name to something I had already been imagining for years.</p></details></div><div class="row"><h3>The long game</h3><span class="st">Now</span><p>I know I may never see most of these things completed in my lifetime. I also know how extraordinarily difficult some of them are.</p><details><summary>Read more</summary><p>But I don’t think difficulty is a good enough reason not to move toward them.</p><p>So I’m trying to build my life in that direction — learning across fields, building things, starting companies, becoming a better engineer, and working on technologies that could move humanity even a little closer to that future.</p><p>I still want to see how far we can go.</p></details></div><p class="g" style="margin-top:14vh">The mission. A direction for a lifetime.</p><p class="sm" style="margin-top:0">My mission is to spend my life helping push humanity toward a Type III civilization.</p><p style="color:var(--dim)">That ambition started with a fascination for space. As a kid, I became obsessed with black holes, wormholes, interstellar travel, and the idea that humanity could someday go far beyond Earth. What began as curiosity slowly became something much larger.</p><p style="color:var(--dim)">Over time, rockets led me to engineering. Engineering led me to physics, energy, AI, robotics, and the technologies that shape civilization itself. I started thinking beyond simply reaching space.</p><p style="font-style:italic">What would it take to build a civilization capable of surviving across planets, harnessing energy at extraordinary scales, constructing technologies like Dyson spheres, developing radically new propulsion systems, and eventually travelling between stars?</p><p>Most of those goals are far beyond what one person — or perhaps even one generation — can achieve. But that doesn’t make them meaningless.</p><p>I want to build technologies that move humanity in that direction: first by improving life and technological capability on Earth, then by helping expand civilization beyond it.</p><p class="sm" style="margin-top:10vh">Earth is where the work begins.</p><p class="big2" style="margin-top:0;color:var(--gold)">The stars are where I want it to lead.</p><h2 class="x" style="margin-top:18vh">I don’t think the path starts with a spaceship.</h2><p>Before SpaceX and Tesla, Elon Musk built Zip2 and X.com. That made something click for me: before trying to build the most capital-intensive technologies in the world, I may first need to build companies that solve real problems, create real value, and give me the resources, experience and network to attempt something much larger.</p><div style="margin-top:8vh"><div class="rung "><span>01</span><div><h3>An earthly foundation</h3><p class="sup">Build ventures</p><p>First, I want to build companies in areas such as AI, robotics, blockchain and other emerging technologies — not as distractions from the long-term mission, but as stepping stones toward it.</p><p>The goal is to spend a few years building useful companies, learning how to build teams, products, infrastructure and organizations, and eventually use that foundation to start the space company I ultimately want to build.</p></div></div><div class="rung k"><span>02</span><div><h3>Access to space</h3><p class="sup">Reusable rockets</p><p>Fully reusable rockets, launch systems, advanced propulsion and the technologies required to move humanity farther into space.</p></div></div><div class="rung "><span>03</span><div><h3>Somewhere to stay</h3><p class="sup">Moon / Mars</p><p>The technologies required to turn temporary missions into permanent civilization: habitats, energy systems, resource utilization, manufacturing, robotics, transportation and life-support infrastructure.</p></div></div><div class="rung "><span>04</span><div><h3>Farther than orbit</h3><p class="sup">Spaceships</p><p>Beyond rockets and planetary bases, I eventually want to work toward spacecraft designed for long-duration travel — vehicles built not just to reach orbit, but to carry humanity deeper into the Solar System and one day toward the stars.</p></div></div><div class="rung "><span>05</span><div><h3>The science underneath it all</h3><p class="sup">Sci-fi engineering</p><p>Studying and building technologies inspired by biology and the nanoscale world — from nanorobotics and biomimetic machines to future systems that could improve health, manufacturing, exploration and survival in extreme environments.</p><p>New materials and manufacturing approaches — including areas such as graphene and nanomaterials — that could enable lighter, stronger, more efficient and more capable machines.</p><p>Intelligent systems that can reason, design, operate machines, automate scientific work and eventually help humans build and maintain complex systems both on Earth and beyond it.</p></div></div><div class="rung "><span>06</span><div><h3>A longer horizon</h3><p class="sup">Type I / Type II / Type III</p><p>Help move Earth toward a more advanced and energy-abundant civilization.</p><p>Then keep pushing toward the kind of civilization that can operate across planets, stars and eventually far beyond them.</p><p>I don’t see these as separate interests. To me, they are pieces of the same long-term puzzle.</p><p>The exact path will change. The direction won’t.</p></div></div></div><p class="g">What I work with</p><div class="stack"><div><h4>Aerospace</h4><p>Aerodynamics, compressible flow, propulsion, rocket engineering, flight mechanics, orbital mechanics, GNC / RCS, CFD, structures / FEA</p></div><div><h4>Engineering &amp; Simulation</h4><p>ANSYS Fluent, ANSYS Structural (FEA), Pointwise, SU2, OpenFOAM, Gmsh, ParaView, SolidWorks, MATLAB</p></div><div><h4>Code (mostly vibe coding)</h4><p>Python, C++, JavaScript</p></div><div><h4>AI / Software</h4><p>LLMs, AI agents, APIs, AI-assisted engineering</p></div><div><h4>Hardware</h4><p>Arduino, ESP32, sensors, rapid prototyping</p></div></div><p class="g">Experience</p><div class="row"><h3>National Aerospace Laboratories</h3><span class="st">CFD Division — Aerospace Engineering Intern</span><p>Hands-on experience working with CFD workflows and tools including Pointwise, Gmsh, SU2, OpenFOAM and related simulation processes.</p></div><div class="stack" style="margin-top:3rem"><div><h4>Currently learning</h4><p>Advanced CFD, propulsion, AI systems, robotics, physics</p></div><div><h4>Currently building</h4><p>AI-native engineering tools, startup ideas, aerospace systems</p></div></div></section>
+
+<section id="build" data-l="Cislunar space, 384,400 km"><p class="lay">Cislunar space, 384,400 km. Coming in.</p><h2 class="x">Learning by making.</h2><p class="sub">Rockets, simulations, engineering tools. Some finished, some still taking shape.</p><p class="g">Aerospace</p><p class="sub" style="margin:0 0 1rem">Flight, flow, propulsion, and the work of learning to build rockets.</p><div class="row"><h3>Model Rocketry Team</h3><span class="st">Completed / Discontinued</span><p>Designing, building, and launching our first rocket.</p><details><summary>Explore</summary><p>Led my college model rocketry team and worked on the design, development, and launch of our first rocket. We successfully completed the launch, but the team later dissolved and the project was discontinued.</p></details></div><div class="row"><h3>Wind Tunnel Experiments</h3><span class="st">Completed</span><p>Printed test articles and pressure measurements in a wind tunnel.</p><details><summary>Explore</summary><p>Designed and 3D-printed a rocket nose cone and wing test article, added pressure tap points, and tested them in a wind tunnel to study aerodynamic behavior and measure quantities such as pressure distribution, drag, and aerodynamic forces.</p></details></div><div class="row"><h3>Variable-Geometry Scramjet</h3><span class="st">Active exploration</span><p>Exploring an inlet that adapts to different flight conditions.</p><details><summary>Explore</summary><p>Ongoing exploration into how a scramjet inlet could move beyond fixed geometry and adapt its shape for different operating conditions. The goal is to understand where variable geometry could improve inlet performance and how the idea might eventually be used in future high-speed propulsion systems.</p></details></div><div class="row"><h3>Cold-Gas Reaction Control System</h3><span class="st">Prototype / partially tested</span><p>Nitrogen thrusters, attitude control, and a 6-DOF study.</p><details><summary>Explore</summary><p>Designed and studied a small reaction control system using a gaseous-nitrogen tank and four cold-gas thrusters. The project included propulsion testing, CFD and FEA simulations, PID-based attitude-control logic, and a 6-DOF dynamics study.</p><p>The work reached the simulation and limited testing stage, but was not developed into a fully validated flight-ready system.</p></details></div><div class="row"><h3>CFD Studies</h3><span class="st">Finished</span><p>Aerodynamic and compressible-flow studies, from airfoils to grid fins.</p><details><summary>Explore</summary><p>Worked on multiple aerodynamic and compressible-flow CFD cases including the ONERA M6 wing, RAE2822 supercritical airfoil, converging-diverging nozzle, grid fins, and other rocket and wing configurations.</p><p>Used ANSYS Fluent, Pointwise, SU2, Gmsh, OpenFOAM, and ParaView to study meshing, shocks, flow behavior, aerodynamic forces, pressure distribution, solver workflows, numerical methods, and some underlying mathematical solutions.</p><p class="sup" style="margin-top:1.6rem">From my internship report: CSIR NAL, Bangalore</p><p>Three months in the Computational &amp; Theoretical Fluid Dynamics (CTFD) Division at CSIR National Aerospace Laboratories (18 Aug to 18 Nov 2025), working through meshing, SU2 simulation, ParaView post-processing and validation against experimental data.</p><p><b style="color:var(--fg);font-weight:600">NACA 0012 airfoil.</b> Structured C-mesh and O-mesh with a boundary-layer extrusion in Pointwise and GMSH, inviscid Euler simulations in SU2 at several angles of attack, and Cp distributions and contours in ParaView.</p><p><b style="color:var(--fg);font-weight:600">RAE2822 supercritical airfoil.</b> RANS with the Spalart–Allmaras model at about Mach 0.729 and 2.31° angle of attack. The shock location matched the experiment closely, with minor differences in pressure recovery near the trailing edge.</p><p><b style="color:var(--fg);font-weight:600">ONERA M6 wing.</b> A 3D unstructured mesh refined around mid-span, run at about Mach 0.8395 and 3.06° angle of attack. Cp was compared with wind-tunnel data at y/b = 0.20, 0.44, 0.65, 0.80, 0.90 and 0.95, and the higher tip suction peak and the shock strengthening along the span were captured, with reasonable agreement.</p><p><b style="color:var(--fg);font-weight:600">Eglin wing-store separation.</b> Mesh built in Pointwise, store translation and rotation scripted with rotation matrices from experimental positions (6-DOF), simulated in SU2, with forces, moments, trajectories and flow features post-processed in ParaView, plus mesh-independence and convergence checks.</p><p><a href="CFD_reports.pdf" target="_blank" rel="noopener" style="color:var(--gold)">Read the full internship report (PDF) →</a></p></details></div><div class="row"><h3>Store Separation Simulation</h3><span class="st">Finished</span><p>Simulating a store released from an aircraft using CFD and rigid-body dynamics.</p><details><summary>Explore</summary><p>Built a CFD-based store-separation study for a missile/store released from an aircraft.</p><p>Created and refined the mesh in Pointwise, configured flow and motion conditions in SU2, advanced the store through multiple time steps using scripting, and studied 6-DOF behavior including pitch, roll, yaw, translation, orientation, aerodynamic forces and moments.</p><p>The work involved rotation matrices, Newtonian mechanics, rigid-body equations, and post-processing of the separation trajectory.</p></details></div><p class="g">Aerospace software</p><p class="sub" style="margin:0 0 1rem">Tools that make engineering work better.</p><div class="row"><h3>CaseForge</h3><span class="st">Open source / Built</span><p>An open-source toolkit for repeatable SU2 workflows.</p><details><summary>Explore</summary><p>Built an open-source workflow toolkit for SU2 to make CFD case setup and execution easier and more repeatable.</p><p>The project focuses on reducing repetitive setup work, organizing simulation cases cleanly, and improving workflows around running and managing SU2-based CFD studies.</p></details></div><div class="row"><h3>AI-Native CAE</h3><span class="st">Active development</span><p>AI agents for engineering workflows, with the engineer in control.</p><details><summary>Explore</summary><p>Building an AI-native, solver-independent engineering platform aimed at making CFD, FEA, thermal, and other CAE workflows easier to create, execute, debug, and understand.</p><p>The system is being designed around AI agents that can work with tools such as OpenFOAM, SU2, Gmsh, and ParaView while keeping the engineer in control of the underlying physics and workflow.</p></details></div><p class="g">Other builds / study</p><p class="sub" style="margin:0 0 1rem">Experiments beyond aerospace.</p><div class="row"><h3>AI Expiry Tracker</h3><span class="st">Built / Experimental</span><p>Tracking product expiry dates with AI assistance.</p><details><summary>Explore</summary><p>Built an AI-assisted application for tracking product expiry dates and helping users identify what is approaching expiration before it is forgotten or wasted.</p></details></div><div class="row"><h3>Quantum Computing Study</h3><span class="st">Completed study</span><p>An introduction to quantum computing and its applications.</p><details><summary>Explore</summary><p>Completed introductory study and certification work in quantum computing to understand its fundamental concepts, computational model, and potential applications.</p></details></div></section>
+
+<section id="frontiers" data-l="Geostationary orbit, 35,786 km"><p class="lay">Geostationary orbit, 35,786 km. What comes next.</p><h2 class="x">Frontiers</h2><p class="sub">Ideas, companies and technologies I’m building toward next.</p><p class="g">Active</p><div class="row"><h3>Optic</h3><span class="st"></span><p>Understand and improve how your public digital footprint is interpreted.</p></div><div class="row"><h3>Zip3</h3><span class="st"></span><p>Find local people, skills, services, and capabilities through AI.</p></div><p style="margin-top:2rem">Want to work on it? <a href="#hi" style="color:var(--gold)">Reach me →</a></p><p class="g">Started working</p><div class="row"><h3>Personal AI Twin</h3><span class="st"></span><p>A personalized AI that learns how you think, work, and decide.</p></div><div class="row"><h3>Decentralized Identity + AI</h3><span class="st"></span><p>More control over digital identity, verification, and reputation.</p></div><div class="row"><h3>Swarm Drones</h3><span class="st"></span><p>Autonomous drones that coordinate and operate together.</p></div><div class="row"><h3>AI-Native Aerospace Software</h3><span class="st">On hold</span><p>Intelligent tools for designing and simulating aerospace systems.</p></div><p class="g">Stealth</p><div class="row"><h3>Blockchain</h3><span class="st"></span><p>Exploring blockchain infrastructure and digital transactions.</p></div><div class="row"><h3>Biotech / Bioscience</h3><span class="st"></span><p>Exploring a biotechnology problem I’m not ready to share yet.</p></div><div class="inv"><p class="g">Long term</p><div class="row"><h3>Space Company</h3><span class="st">Working on it, target launch 2030–2032</span><p>From reusable rockets in India to infrastructure, spacecraft, and civilization beyond Earth.</p></div><div class="row"><h3>Nanotechnology &amp; Advanced Materials</h3><span class="st"></span><p>Materials for difficult rocket and space-infrastructure problems.</p></div><div class="row"><h3>Biomimetic Engineering</h3><span class="st"></span><p>Learning from nature to solve engineering problems on Earth and beyond.</p></div><div class="row"><h3>Type I Civilization Technologies</h3><span class="st"></span><p>Energy, climate, and infrastructure for a more capable Earth.</p></div><div class="row"><h3>…and many more.</h3><span class="st"></span></div></div></section>
+
+<section id="mind" data-l="Low Earth orbit, 400 km"><p class="lay">Low Earth orbit, 400 km. Between worlds.</p><h2 class="x">Mind</h2><p class="sub">People, ideas, books and words that shaped how I think.</p><p class="g">People</p><div class="row"><h3>Elon Musk</h3><span class="st">Hugely inspired</span><p>Elon Musk deeply influenced my first-principles thinking, fascination with rockets, and engineering ambition. His example helped shape how I think about building companies before moonshots, tackling problems that seem impossible, and humanity’s long-term future at a civilization scale.</p></div><div class="row"><h3>Prophet Muhammad</h3><span class="st">Hugely inspired</span><p>Shaped how I think about life wisdom, character, leadership, discipline, responsibility, how to treat people, and spiritual grounding.</p></div><div class="row"><h3>My Dad</h3><span class="st">Major personal influence</span></div><div class="row"><h3>Steve Jobs</h3><span class="st">Influence</span></div><div class="row"><h3>Nikola Tesla</h3><span class="st">Influence</span></div><div class="row"><h3>Michio Kaku</h3><span class="st">Influence</span></div><div class="row"><h3>Stephen Hawking</h3><span class="st">Influence</span></div><div class="row"><h3>Albert Einstein</h3><span class="st">Influence</span></div><div class="row"><h3>Naval Ravikant</h3><span class="st"></span><p>Leverage, specific knowledge, wealth, long-term decision-making, reading, independence, and clear judgment.</p></div><p class="g">Also inspired by</p><p>Jeff Bezos, Mark Zuckerberg, Richard Feynman, Mahendra Singh Dhoni, Jensen Huang</p><p class="g">Words I live by</p><div id="q" aria-live="polite"></div><div class="ctl"><button class="b" onclick="sq(-1)" aria-label="Previous quote">←</button><span id="qc"></span><button class="b" onclick="sq(1)" aria-label="Next quote">→</button></div><p class="st" style="margin-top:1rem">Use the left and right arrow keys to browse quotes.</p><div class="feat"><h3 class="fh">Ideas</h3><p class="sub">Books, questions, and things that changed me.</p><div id="ideas"></div></div><div class="feat"><h3 class="fh">Things I never want to forget</h3><p class="sub">Videos, images, books, speeches, articles, moments.</p><div class="stack" id="ar"></div></div></section>
+
+<section id="wisdom" data-l="Stratosphere, 30 km"><p class="lay">Stratosphere, 30 km. Learning on the way.</p><h2 class="x">Wisdom</h2><p class="sub">Things I’m learning from engineering, building, books, mistakes, science and life.</p><div id="wi"></div></section>
+
+<section id="hi" data-l="Launch pad, 0 km"><p class="lay">Launch pad, 0 km. Earth is where the work begins.</p><h2 class="hi">Say hi.</h2><p>If you’re building something difficult, researching something strange, or thinking seriously about humanity’s future, I’d probably enjoy talking to you.</p><div style="margin-top:4vh;max-width:46rem"><a class="lk" href="mailto:sahilonnet1@gmail.com"><span>Email</span><small>sahilonnet1@gmail.com</small></a><a class="lk" href="https://github.com/sahil-elon" target="_blank" rel="noopener"><span>GitHub</span><small>github.com/sahil-elon</small></a><a class="lk" href="https://www.linkedin.com/in/sahil-chaudhary-266876252/" target="_blank" rel="noopener"><span>LinkedIn</span><small>sahil-chaudhary-266876252</small></a><a class="lk" href="https://x.com/sahil_jc" target="_blank" rel="noopener"><span>X</span><small>@sahil_jc</small></a></div></section>
+</main>
+
+<script>
+/* ============ YOUR CONTENT: ADD NEW ENTRIES HERE ============
+   Add one line per entry, keep the comma at the end, save, then push to GitHub.
+   WISDOM categories must be exactly: Notes, Essays, Life, Blogs, Engineering Lessons
+   Example lines (remove the // to use them):
+   // {cat:"Notes", date:"2026-11-02", title:"Why I started", text:"First paragraph.\n\nSecond paragraph.", url:""},
+   // {title:"What if rockets were airliners?", date:"2026-11-02", text:"Short note about the idea."},
+   // {type:"Books", title:"Cosmos", note:"Carl Sagan", url:""},    (type: Videos, Images, Books, Speeches, Articles or Moments)
+*/
+const WISDOM=[
+];
+const IDEAS=[
+];
+const ARCHIVE=[
+];
+/* ============ END OF YOUR CONTENT ============ */
+
+const $=s=>document.querySelector(s);
+const row=(t,s,d)=>`<div class="row"><h3>${t}</h3><span class="st">${s||''}</span>${d?`<p>${d}</p>`:''}</div>`;
+const grp=(t,a)=>`<p class="g">${t}</p>`+a.map(x=>row(...x)).join('');
+const Q=[["If something is important enough, you do it even if the odds are not in your favor.","Elon Musk"],
+["We gotta be excited about the future. We have to do things that make us want to live — that give us a reason to get up in the morning. Life can’t just be about solving one miserable problem after another.","Elon Musk"],
+["Take risks. Don’t fear. The biggest risk in life is not taking any risks.",""],
+["Stay optimistic and wrong rather than pessimistic and right.","Elon Musk"],
+["Everything around you that you call life was made up by people who were no smarter than you.","Steve Jobs"],
+["Don’t listen to anyone. This world is a stage and they are just the audience.",""],
+["Except death, every fight is psychological.",""],
+["I won’t give up, unless I am dead or incapacitated.","Elon Musk"],
+["Mediocrity sucks.",""]];
+let qi=0;const qe=$('#q'),pad=n=>String(n).padStart(2,'0');
+function sq(d,i=0){qi=(qi+d+Q.length)%Q.length;qe.style.opacity=0;setTimeout(()=>{qe.innerHTML=`“${Q[qi][0]}”<small>${Q[qi][1]}</small>`;$('#qc').textContent=pad(qi+1)+' / '+pad(Q.length);qe.style.opacity=1},i?0:180)}
+sq(0,1);
+
+/* launch sequence */
+const ct=$('#ct'),big=$('#big'),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;let fin=0;
+function done(){if(fin)return;fin=1;ct.remove();document.documentElement.style.overflow='';
+let n=0;big.innerHTML=[..."TYPE III."].map(c=>c==' '?' ':`<span class="l" style="--i:${n++}">${c}</span>`).join('');$('#rest').classList.add('on')}
+done();if(0){document.documentElement.style.overflow='hidden';ct.onclick=done;
+['2','1','Go'].forEach((t,i)=>setTimeout(()=>{if(!fin)ct.textContent=t},(i+1)*750));setTimeout(done,3000)}
+
+/* finale: rocket launches in one go at the bottom */
+const rk=$('#rk'),cd=document.createElement('div');cd.id='cd';document.body.appendChild(cd);let RL=0,RT=[];
+function launch(){if(RL||rm)return;RL=1;rk.style.opacity=1;rk.classList.add('sh');
+[['3',0],['2',700],['1',1400]].forEach(([t,d])=>RT.push(setTimeout(()=>cd.textContent=t,d)));
+RT.push(setTimeout(()=>{cd.textContent='Liftoff';rk.classList.remove('sh');rk.style.transition='transform 2.8s cubic-bezier(.5,0,1,.7)';rk.style.transform='translateY(-140vh)'},2100));
+RT.push(setTimeout(()=>cd.textContent='',3600))}
+function reset(){RL=0;RT.forEach(clearTimeout);RT=[];cd.textContent='';rk.classList.remove('sh');rk.style.transition='none';rk.style.transform=''}
+/* blueprint layer: drafting grid, cursor crosshair and title blocks fade in as you reach the drawing board */
+const GR=$('#gr'),XS=['#vx','#hy','#co'].map(x=>$(x));
+[...document.querySelectorAll('main>section')].forEach((x,i,a)=>{if(i){const t=document.createElement('div');t.className='tb';t.innerHTML='Sahil / sheet '+pad(i+1)+' of '+pad(a.length)+'<br>scale 1:1';x.appendChild(t)}});
+if(matchMedia('(hover:hover) and (pointer:fine)').matches){XS.forEach(e=>e.style.display='block');addEventListener('pointermove',e=>{XS[0].style.transform='translateX('+e.clientX+'px)';XS[1].style.transform='translateY('+e.clientY+'px)';XS[2].style.transform='translate('+(e.clientX+14)+'px,'+(e.clientY+14)+'px)';XS[2].textContent='X '+String(e.clientX).padStart(4,'0')+'  Y '+String(Math.round(e.clientY+scrollY)).padStart(5,'0')},{passive:true})}
+/* ascent: sky fades to space, stars streak with scroll speed */
+const C=[[0,[18,63,140]],[.1,[10,34,96]],[.28,[7,13,43]],[.5,[2,3,10]],[1,[0,0,0]]];
+const sky=p=>{for(let i=1;i<C.length;i++)if(p<=C[i][0]){const a=C[i-1],b=C[i],t=(p-a[0])/(b[0]-a[0]);return a[1].map((v,j)=>Math.round(v+(b[1][j]-v)*t))}return C[4][1]};
+const cv=$('#st'),cx=cv.getContext('2d'),secs=[...document.querySelectorAll('section')];let W,H,S,v=0,last=scrollY;
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight;S=Array.from({length:240},()=>({x:Math.random()*W,y:Math.random()*H,z:Math.random()*.9+.1}))}
+rs();addEventListener('resize',rs);
+function fr(){const y=scrollY,dy=y-last;last=y;v+=(dy-v)*.12;
+const P=Math.min(1,Math.max(0,y/((document.documentElement.scrollHeight-innerHeight)||1)));
+const c='rgb('+sky(1-P)+')';document.body.style.background=c;document.documentElement.style.background=c;ct.style.background=c;document.documentElement.style.setProperty('--sky',c);
+cx.clearRect(0,0,W,H);cx.strokeStyle='#fff';const a=Math.min(1,Math.max(0,(1-P-.04)*5));
+for(const s of S){s.y-=dy*s.z*.6;if(s.y<0)s.y+=H;if(s.y>H)s.y-=H;cx.globalAlpha=a*s.z;cx.lineWidth=s.z*1.6;cx.beginPath();cx.moveTo(s.x,s.y);cx.lineTo(s.x,s.y+1+Math.abs(v)*s.z*1.4);cx.stroke()}
+$('#alt').textContent=Math.max(0,Math.round(Math.pow(10,(1-P)*9)-1)).toLocaleString('en-US')+' km';
+let cur=secs[0];secs.forEach(s=>{if(s.offsetTop<=y+innerHeight*.5)cur=s});$('#ly').textContent=cur.dataset.l;
+$('#fl').style.transform='scaleY('+(RL?4.5:1+Math.min(Math.abs(v)*.18,3.5)).toFixed(2)+')';
+if(!RL){rk.style.opacity=1;rk.style.transform='translateY('+(-(1-P)*H*.6).toFixed(1)+'px)'}
+if(P>=.985)launch();else if(P<.9&&RL)reset();
+const gq=Math.min(1,Math.max(0,(P-.45)/.45));GR.style.opacity=gq;XS.forEach(e=>e.style.opacity=gq);
+requestAnimationFrame(fr)}
+if(rm){addEventListener('scroll',()=>{v=0})}
+fr();
+
+/* orrery: starts as the home scene, docks into a corner minimap as you ascend; it is also the navigation and progress */
+(()=>{
+const c=$('#or'),g=c.getContext('2d'),ss=[...document.querySelectorAll('main>section')],rmo=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const PL=[["about","About","#6fa8ff",.5,5],["build","Build","#d6d9e2",.38,4],["frontiers","Frontiers","#ff8a5c",.28,5],["mind","Mind","#e8c48a",.2,7],["wisdom","Wisdom","#f2dca0",.15,6],["hi","Say hi","#9be7ff",.1,4]];
+const SW=Array.from({length:300},(_,i)=>({a:Math.random()*6.283,t:.15+Math.random()*.8,k:.9+Math.random()*.25,s:(.2+Math.random()*.3)*(Math.random()<.5?1:-1),g:i%6}));
+let W,H,mx=-99,my=-99,hov=-1,mr=0;
+function rs(){const d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;g.setTransform(d,0,0,d,0,0)}
+rs();addEventListener('resize',rs);
+const mix=(a,b,e)=>a+(b-a)*e;
+function fr(ms){const t=rmo?0:ms/1000,y=scrollY,k=Math.min(1,y/(H*.7)),e=k*k*(3-2*k),D=W>760;
+let cur=0;ss.forEach((s,i)=>{if(s.offsetTop<=y+H*.5)cur=i});mr=Math.max(mr,cur);
+const R0=D?Math.min(W*.22,H*.62):W*.4,R1=D?74:54,R=mix(R0,R1,e),X=mix(D?W*.74:W/2,W-R1-14,e),Y=mix(D?H*.36:H*.3,H-R1*.5-46,e);
+g.clearRect(0,0,W,H);g.lineWidth=1;g.strokeStyle='#ffffff40';g.setLineDash([3,6]);
+PL.forEach((p,i)=>{const r=R*(.3+.14*i);g.beginPath();g.ellipse(X,Y,r,r*.5,0,0,6.283);g.stroke();const a=i*1.7+t*p[3]*.6;p.x=X+Math.cos(a)*r;p.y=Y+Math.sin(a)*r*.5;p.f=Math.sin(a)>=0;p.r=p[4]*(1-.45*e)});
+hov=-1;PL.forEach((p,i)=>{if(Math.hypot(mx-p.x,my-p.y)<Math.max(p.r+8,14))hov=i});
+const dp=(p,i)=>{g.setLineDash([]);const h=hov==i,on=cur==i+1,r=p.r*(h?1.5:1);g.fillStyle=p[2];g.beginPath();g.arc(p.x,p.y,r,0,6.283);g.fill();
+if(on||i<mr){g.strokeStyle=on?'#ffd166':'#ffd16666';g.lineWidth=on?1.6:1;g.beginPath();g.arc(p.x,p.y,r+3,0,6.283);g.stroke()}
+if(h||on||e<.5){g.globalAlpha=h||on?1:1-e*2;g.fillStyle=h||on?'#ffd166':'#ffffffb3';g.font='500 11px "Geist Mono",monospace';g.fillText(p[1],p.x+r+7,p.y+4);g.globalAlpha=1}};
+PL.forEach((p,i)=>p.f||dp(p,i));
+const n=mr,q=R*(.22+.04*n),gr=g.createRadialGradient(X,Y,0,X,Y,q);gr.addColorStop(0,'#fff7d0');gr.addColorStop(.18,'#ffd166');gr.addColorStop(.4,'#ffd16655');gr.addColorStop(1,'#ffd16600');
+g.fillStyle=gr;g.beginPath();g.arc(X,Y,q,0,6.283);g.fill();
+g.fillStyle='#ffe9a8';for(const s of SW){if(s.g>=n)continue;const a=s.a+t*s.s,rr=R*.17*s.k;g.fillRect(X+Math.cos(a)*rr,Y+Math.sin(a)*rr*Math.sin(s.t*1.9),1.6,1.6)}
+PL.forEach((p,i)=>p.f&&dp(p,i));
+if(n==6&&e>.6){g.fillStyle='#ffd166';g.font='500 11px "Geist Mono",monospace';g.fillText('Type III',X-22,Y+R*.5+20)}
+
+document.body.style.cursor=hov>=0?'pointer':'';
+requestAnimationFrame(fr)}
+requestAnimationFrame(fr);
+addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY},{passive:true});
+document.addEventListener('click',e=>{if(e.target.closest('a,button'))return;if(hov>=0)ss[hov+1].scrollIntoView({behavior:rmo?'auto':'smooth'})});
+})();
+
+/* renders the three lists above */
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const para=t=>esc(t).split(/\n\n+/).map(x=>'<p>'+x.replace(/\n/g,'<br>')+'</p>').join('');
+const gl=(u,l)=>u?'<a href="'+esc(u)+'" target="_blank" rel="noopener" style="color:var(--gold)">'+l+'</a>':'';
+$('#wi').innerHTML=['Notes','Essays','Life','Blogs','Engineering Lessons'].map(c=>{const e=WISDOM.filter(x=>x.cat==c).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+return '<div class="row"><h3>'+c+'</h3><span class="st">'+(e.length?e.length+(e.length>1?' entries':' entry'):'Nothing published yet')+'</span>'+(c=='Notes'&&!e.length?'<p>I’m still collecting things worth writing down.</p>':'')+e.map(x=>'<details style="margin-top:1rem"><summary>'+esc((x.date?x.date+'  ':'')+x.title)+'</summary>'+para(x.text||'')+gl(x.url,'Read more →')+'</details>').join('')+'</div>'}).join('');
+$('#ideas').innerHTML=IDEAS.length?IDEAS.map(x=>'<div class="row"><h3>'+esc(x.title)+'</h3><span class="st">'+esc(x.date||'')+'</span>'+(x.text?para(x.text):'')+'</div>').join(''):'<p class="st">Entries to come.</p>';
+$('#ar').innerHTML=['Videos','Images','Books','Speeches','Articles','Moments'].map(t=>{const e=ARCHIVE.filter(x=>x.type==t);return '<div><h4>'+t+'</h4>'+(e.length?e.map(x=>'<p>'+(x.url?gl(x.url,esc(x.title)):esc(x.title))+(x.note?'<br><span class="st">'+esc(x.note)+'</span>':'')+'</p>').join(''):'<p class="st">Nothing yet</p>')+'</div>'}).join('');
+addEventListener('keydown',e=>{if(e.key=='ArrowRight')sq(1);if(e.key=='ArrowLeft')sq(-1)});
+</script></body></html>
